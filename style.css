@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=IBM+Plex+Mono:ital,wght@1,100&family=Montserrat:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --ff-01: 'Montserrat',. sans-serif;
+    --ff-02: 'DM Sans', sans-serif;
+    --ff-03: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background: linear-gradient(45deg, #190361, #bb00ff);
+	animation: gradient 10s ease infinite;
+    background-size: 200% 200%;
+    min-height: 100vh;
+    text-align: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+main {
+    box-shadow: 0 .2rem .4rem rgba(0, 0, 0, 0.1);
+    border-radius: .6rem;
+    height: 100vh;
+    padding: 5rem 7rem;
+    
+    display: flex;
+    align-items: center;
+}
+
+.screen1 {
+    max-width: 43rem;
+    max-height: 43rem;
+    background-color: white;
+    box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    
+    margin: 0 auto;
+    padding: 5rem 6rem 6rem;
+}
+
+h1, h2 {
+    font-family: var(--ff-01);
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    color: #34355B;
+    margin-bottom: 2rem;
+}
+
+p {
+    font-family: var(--ff-02);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 1.4rem 0 2rem;
+}
+
+.closed-cookie {
+    animation: shake 100ms alternate-reverse infinite paused;
+    cursor: pointer;
+}
+
+.closed-cookie:hover {
+    animation-play-state: running;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(-2deg); 
+    }
+    100% {
+        transform: rotate(2deg);
+    }
+}
+
+.screen2 {
+    max-width: 40rem;
+    min-height: 46rem;
+    background-color: white;
+    box-shadow: 0rem 2rem 5rem rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    
+    margin: 0 auto;
+    padding: 5rem 6rem 6rem;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.opened-cookie {
+    padding: 0 3rem;
+    height: 15rem;
+    width: 30rem;
+}
+
+.message {
+    font-family: var(--ff-03);
+    font-weight: 400;
+    line-height: 2.5rem;
+    font-size: 1.8rem;
+    box-shadow: 0.2rem 0.2rem 0.2rem rgba(85, 85, 85, 0.5);
+    background: #E4EDF1;
+    animation: animationMessage;
+    animation-duration: 1.2s;
+    padding: 1rem;
+}
+
+@keyframes msganimada{
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(20rem);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+    
+}
+
+button {
+    padding: 1.6rem;
+    margin: 0 auto;
+    min-width: 17.4rem;
+    height: 5.2rem;
+    border-radius: .4rem;
+    
+    background: #FF9500;
+    color: white;
+    font-family: var(--ff-02);
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    
+    border: none;
+    text-align: center;
+    
+    cursor: pointer;
+}
+
+.hide {
+    display: none;
+}
